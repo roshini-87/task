@@ -15,7 +15,7 @@ def connect():
         host="localhost", port="5432") 
     cur=conn.cursor()
 
-    cur.execute('''select * from public.user''')
+    cur.execute('''select * from task''')
     values=cur.fetchall()
     conn.commit()
     return render_template('index.html',data=values)
